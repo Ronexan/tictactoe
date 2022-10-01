@@ -1,0 +1,111 @@
+body {
+    font-family: sans-serif;
+}
+
+.flex-container {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0px 0px 7px 4px #ccc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+#line {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 10px;
+    background-color: green;
+    z-index: 2;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    transition: 0.4s background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tile:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes rotate-z {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+
+.turn-info {
+    font-size: 2em;
+    text-align: center;
+}
+
+.center-container {
+    /* width: 300px; */
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score-text-container {
+    margin-bottom: 10px;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score-text {
+    /* font-size: 1em; */
+    text-align: center;
+}
+
+#game-over-screen {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#winner-text {
+    font-size: 4em;
+    text-shadow: 0px 0px 8px black;
+    color: white;
+    text-align: center;
+    z-index: inherit;
+}
+
